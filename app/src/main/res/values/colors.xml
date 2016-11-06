@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#03A9F4</color>
+    <color name="colorPrimaryDark">#0288D1</color>
+    <color name="colorPrimary_light">#B3E5FC</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary_text">#212121</color>
+    <color name="colorSecondary_text">#757575</color>
+    <color name="colorIcons">#ffffff</color>
+    <color name="colorDivider">#BDBDBD</color>
+
+    <color name="fondotransparente">#00ffffff</color>
+    <color name="background_footer">#20000000</color>
+
+    <color name="color_verbos">#00E5FF</color>
+    - <!--   Cyan A400
+  -->
+    <color name="color_alimentos">#FFEA00</color>
+    - <!--   Yellow A400
+  -->
+    <color name="color_familia">#607D8B</color>
+    - <!--   Blue Gray 500
+  -->
+    <color name="color_profesiones">#64FFDA</color>
+    - <!--   Teal A200
+  -->
+    <color name="color_lugares">#CE93D8</color>
+    - <!--   Purple 200
+  -->
+    <color name="color_animales">#FF4081</color>
+    - <!--   Pink A200
+  -->
+    <!--Pink 500-->
+    <color name="accent_500">#E91E63</color>
+    <!--Pink 700-->
+    <color name="accent_700">#C2185B</color>
+
+</resources>
+
+
+
+

@@ -1,0 +1,39 @@
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Familia"
+        android:textColor="@color/colorIcons"
+        android:background="@color/color_familia"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/reciclador_card_3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:scrollbars="vertical" />
+
+    </FrameLayout>
+
+</LinearLayout>
+
+
+
+
+     <!--
+         android:scrollbars="vertical"  para LiinearLayoutManager y GridLayoutManger vertical
+         android:scrollbars="Horizontal"  para LiinearLayoutManager y GridLayoutManger Horizontal
+
+     -->

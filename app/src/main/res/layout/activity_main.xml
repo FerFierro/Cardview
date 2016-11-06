@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.escom.tt2016.cardview.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/colorAccent">
+
+    </LinearLayout>
+    <HorizontalScrollView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+ <!-- ********************************************************************Verbos********************************************************************-->
+                    <include layout="@layout/recycler_view_card"/>
+
+<!-- *********************************************************************Alimentos**************************************************************** -->
+                    <include layout="@layout/recycler_view_card_2"/>
+
+<!-- *********************************************************************Familia***************************************************************** -->
+                    <include layout="@layout/recycler_view_card_3"/>
+
+<!-- *********************************************************************Profesiones ************************************************************ -->
+                    <include layout="@layout/recycler_view_card_4"/>
+
+<!-- *********************************************************************Lugares **************************************************************** -->
+                    <include layout="@layout/recycler_view_card_5"/>
+
+<!-- *********************************************************************Animales ****************************************************************-->
+                    <include layout="@layout/recycler_view_card_6"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+
+
+</LinearLayout>
