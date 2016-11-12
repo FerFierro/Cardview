@@ -1,49 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.escom.tt2016.cardview.MainActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.escom.tt2016.cardview.activitys.MainActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:background="@color/colorAccent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    </LinearLayout>
-    <HorizontalScrollView
-          android:layout_width="match_parent"
-          android:layout_height="match_parent">
-
-
-        <LinearLayout
+        <ImageView
+            android:id="@+id/iv_main_iniciar_nivel"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            app:srcCompat="@drawable/ic_comunicador_delete_3"/>
 
- <!-- ********************************************************************Verbos********************************************************************-->
-                    <include layout="@layout/recycler_view_card"/>
+        <ImageView
 
-<!-- *********************************************************************Alimentos**************************************************************** -->
-                    <include layout="@layout/recycler_view_card_2"/>
+            android:id="@+id/iv_main_iniciar_comunicador"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            app:srcCompat="@drawable/ic_toast_megaphone_2"
+            android:clickable="true" />
+    </LinearLayout>
 
-<!-- *********************************************************************Familia***************************************************************** -->
-                    <include layout="@layout/recycler_view_card_3"/>
-
-<!-- *********************************************************************Profesiones ************************************************************ -->
-                    <include layout="@layout/recycler_view_card_4"/>
-
-<!-- *********************************************************************Lugares **************************************************************** -->
-                    <include layout="@layout/recycler_view_card_5"/>
-
-<!-- *********************************************************************Animales ****************************************************************-->
-                    <include layout="@layout/recycler_view_card_6"/>
-
-        </LinearLayout>
-
-    </HorizontalScrollView>
-
-
-
-</LinearLayout>
+</RelativeLayout>

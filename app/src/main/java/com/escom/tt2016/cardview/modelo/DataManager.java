@@ -1,7 +1,8 @@
-package com.escom.tt2016.cardview;
+package com.escom.tt2016.cardview.modelo;
 
 import android.content.Context;
 
+import com.escom.tt2016.cardview.R;
 import com.escom.tt2016.cardview.db.DBHelper;
 import com.escom.tt2016.cardview.modelo.Pictograma;
 import static com.escom.tt2016.cardview.modelo.Pictograma.TIPO_PIC_NORMAL;
@@ -12,6 +13,8 @@ import static com.escom.tt2016.cardview.modelo.Pictograma.CAT_LUGARES;
 import static com.escom.tt2016.cardview.modelo.Pictograma.CAT_PROFESIONES;
 import static com.escom.tt2016.cardview.modelo.Pictograma.CAT_VERBOS;
 
+import static com.escom.tt2016.cardview.modelo.Nivel.VISTA_NORMAL;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +22,7 @@ import java.util.List;
  * Created by Angel on 03/11/2016.
  */
 
-public class DatosManager {
+public class DataManager {
 
 
     public  void Init_pictogramas(Context cn){
@@ -27,7 +30,7 @@ public class DatosManager {
             DBHelper dbHandler=new DBHelper(cn);
             System.out.println("*******************************************************************************");
             System.out.println("Entre a Init_pictogramas");
-            dbHandler.addUser(new Pictograma(TIPO_PIC_NORMAL,CAT_VERBOS,"Comer",R.drawable.ic_pic_verbos_comer));
+            dbHandler.addUser(new Pictograma(TIPO_PIC_NORMAL,CAT_VERBOS,"Comer", R.drawable.ic_pic_verbos_comer));
             dbHandler.addUser(new Pictograma(TIPO_PIC_NORMAL,CAT_VERBOS,"Comprar",R.drawable.ic_pic_verbos_comprar));
             dbHandler.addUser(new Pictograma(TIPO_PIC_NORMAL,CAT_VERBOS,"Escribir",R.drawable.ic_pic_verbos_escribir));
             dbHandler.addUser(new Pictograma(TIPO_PIC_NORMAL,CAT_VERBOS,"Estudiar",R.drawable.ic_pic_verbos_estudiar));
@@ -104,6 +107,22 @@ public class DatosManager {
             dbHandler.addUser(new Pictograma(TIPO_PIC_NORMAL,CAT_ANIMALES,"Vaca",R.drawable.ic_pic_animales_vaca));
 
             System.out.println("Se cargaron todos los datos en la bd");
+
+        }
+
+        public void Init_Niveles(Context cn){
+
+                DBHelper dbHandler=new DBHelper(cn);
+                System.out.println("*******************************************************************************");
+                System.out.println("Entre a Init_Niveles");
+
+                dbHandler.addNivel(new Nivel(VISTA_NORMAL,    "Vocales",90,R.drawable.ic_android_muestra));
+                dbHandler.addNivel(new Nivel(VISTA_NORMAL,"Consonantes",50,R.drawable.ic_android_muestra));
+                dbHandler.addNivel(new Nivel(VISTA_NORMAL,  "Bisilabas",100,R.drawable.ic_android_muestra));
+                dbHandler.addNivel(new Nivel(VISTA_NORMAL, "Trisilabas",25,R.drawable.ic_android_muestra));
+                dbHandler.addNivel(new Nivel(VISTA_NORMAL,"Polisilabas",60,R.drawable.ic_android_muestra));
+
+                System.out.println("Se cargaron todos los datos en la bd");
 
         }
 

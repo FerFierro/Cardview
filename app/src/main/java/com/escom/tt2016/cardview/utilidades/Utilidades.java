@@ -6,7 +6,7 @@ import com.escom.tt2016.cardview.R;
 
 public class Utilidades {
 
-    public static int getBackground(int categoria){
+    public static int getBackground_CardView(int categoria){
         int d;
 
         switch (categoria){
@@ -36,7 +36,7 @@ public class Utilidades {
         return d;
     }
 
-    public static int getBackground2(int categoria){
+    public static int getBackground(int categoria){
         int d;
 
         switch (categoria){
