@@ -25,7 +25,7 @@ import static com.escom.tt2016.cardview.utilidades.Utilidades.getBackground;
 public class MethodsManager {
 
     public List<Pictograma> Guardar(int tipo,int categoria,String nombre,int idDrawable,List<Pictograma> PIC_GUARDADO){
-        Pictograma new_pictograma=new Pictograma(tipo,categoria,nombre,idDrawable);
+        Pictograma new_pictograma=new Pictograma(tipo,categoria,nombre,idDrawable,0,0,0);
         PIC_GUARDADO.add(new_pictograma);
         MostrarDatosSeleccionados(PIC_GUARDADO);
         return PIC_GUARDADO;

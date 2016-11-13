@@ -5,25 +5,17 @@ import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.escom.tt2016.cardview.R;
-import com.escom.tt2016.cardview.activitys.MainActivity;
 import com.escom.tt2016.cardview.db.DBHelper;
 import com.escom.tt2016.cardview.modelo.DataManager;
 import com.escom.tt2016.cardview.modelo.MethodsManager;
@@ -225,7 +217,7 @@ public class IniciarNivel_main extends AppCompatActivity implements TextToSpeech
                 speak(mNivel.getNombre());
                 switch (mNivel.getNombre()){
                     case "Vocales":
-                        Vocales=new Intent(IniciarNivel_main.this, EjerciciosEspecificos_main.class);
+                        Vocales=new Intent(IniciarNivel_main.this, Vocales_main.class);
                         startActivity(Vocales);
                         break;
                     case "Consonantes":

@@ -17,7 +17,7 @@
         </activity>
         <activity android:name=".adaptadores.Comunicador_main" />
         <activity android:name=".adaptadores.IniciarNivel_main" />
-        <activity android:name=".adaptadores.EjerciciosEspecificos_main"></activity>
+        <activity android:name=".adaptadores.Vocales_main"></activity>
     </application>
 
 </manifest>

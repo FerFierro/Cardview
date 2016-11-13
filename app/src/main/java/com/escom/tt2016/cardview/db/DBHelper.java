@@ -63,6 +63,9 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final  String CATEGORIA="categoria";
     public static final  String NOMBRE="nombre";
     public static final  String ID_DRAWABLE="idDrawable";
+    public static final  String ID_SONIDO="idSonido";
+    public static final  String ID_SONIDO2="idSonido2";
+    public static final  String ID_SONIDO3="idSonido3";
 
     //Nombre de los campos de la tabla usuarios
     public static final  String ID_NIVEL="idNivel";
@@ -78,7 +81,10 @@ public class DBHelper extends SQLiteOpenHelper {
             + TIPO+"  INTEGER,"
             + CATEGORIA +" INTEGER,"
             + NOMBRE +" TEXT NOT NULL,"
-            + ID_DRAWABLE +" INTEGER);";
+            + ID_DRAWABLE+"  INTEGER,"
+            + ID_SONIDO+"  INTEGER,"
+            + ID_SONIDO2+"  INTEGER,"
+            + ID_SONIDO3 +" INTEGER);";
 
     public static final String CREATE_TABLE_NIVEL="CREATE TABLE "+ TABLE_NIVEL+" ("
             + ID_NIVEL + " INTEGER PRIMARY KEY AUTOINCREMENT,"
@@ -97,6 +103,11 @@ public class DBHelper extends SQLiteOpenHelper {
         values.put(CATEGORIA, picto.getCategoria());
         values.put(NOMBRE, picto.getNombre());
         values.put(ID_DRAWABLE,picto.getIdDrawable());
+        values.put(ID_SONIDO,picto.getIdSonido());
+        values.put(ID_SONIDO2,picto.getIdSonido2());
+        values.put(ID_SONIDO3,picto.getIdSonido3());
+
+
 
         db.insert(TABLE_PICTOGRAMA, null, values); //Insert query to store the record in the database
         db.close();
@@ -124,7 +135,7 @@ public class DBHelper extends SQLiteOpenHelper {
         if (cursor != null)
             cursor.moveToFirst();
 
-        Pictograma pic = new Pictograma(cursor.getInt(1), cursor.getInt(2),cursor.getString(3),cursor.getInt(4));
+        Pictograma pic = new Pictograma(cursor.getInt(1), cursor.getInt(2),cursor.getString(3),cursor.getInt(4),cursor.getInt(5),cursor.getInt(6),cursor.getInt(7));
         return pic;
     }
 
@@ -139,7 +150,7 @@ public class DBHelper extends SQLiteOpenHelper {
         // looping through all rows and adding to list
         if (cursor.moveToFirst()) {
             do {
-                Pictograma pic = new Pictograma(cursor.getInt(1), cursor.getInt(2),cursor.getString(3),cursor.getInt(4));
+                Pictograma pic = new Pictograma(cursor.getInt(1), cursor.getInt(2),cursor.getString(3),cursor.getInt(4),cursor.getInt(5),cursor.getInt(6),cursor.getInt(7));
                 usersList.add(pic);
             } while (cursor.moveToNext());
         }

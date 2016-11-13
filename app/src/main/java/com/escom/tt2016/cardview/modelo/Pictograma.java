@@ -20,19 +20,26 @@ public class Pictograma {
     public static final int CAT_PROFESIONES =4;
     public static final int CAT_LUGARES =5;
     public static final int CAT_ANIMALES =6;
-    public static final int CAT_OTRO =7;
+    public static final int CAT_VOCALES=7;
+    public static final int CAT_BISILABAS=8;
+    public static final int CAT_TRISILABAS=9;
+    public static final int CAT_POLISILABAS=10;
 
     private int id;
     private int tipo;
     public int categoria;
     public String nombre;
     public int idDrawable;
+    public int idSonido,idSonido2,idSonido3;
 
-    public Pictograma(int tipo, int categoria, String nombre, int idDrawable) {
+    public Pictograma(int tipo, int categoria, String nombre, int idDrawable,int idSonido,int idSonido2,int idSonido3) {
         this.tipo = tipo;
         this.categoria = categoria;
         this.nombre = nombre;
         this.idDrawable = idDrawable;
+        this.idSonido = idSonido;
+        this.idSonido2 = idSonido2;
+        this.idSonido3 = idSonido3;
     }
 
     public int getId() {
@@ -73,6 +80,30 @@ public class Pictograma {
 
     public void setIdDrawable(int idDrawable) {
         this.idDrawable = idDrawable;
+    }
+
+    public int getIdSonido() {
+        return idSonido;
+    }
+
+    public void setIdSonido(int idSonido) {
+        this.idSonido = idSonido;
+    }
+
+    public int getIdSonido2() {
+        return idSonido2;
+    }
+
+    public void setIdSonido2(int idSonido2) {
+        this.idSonido2 = idSonido2;
+    }
+
+    public int getIdSonido3() {
+        return idSonido3;
+    }
+
+    public void setIdSonido3(int idSonido3) {
+        this.idSonido3 = idSonido3;
     }
 
     public String toString() {
